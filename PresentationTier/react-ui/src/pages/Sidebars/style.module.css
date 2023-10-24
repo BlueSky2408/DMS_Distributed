@@ -1,0 +1,68 @@
+.sidebar {
+    flex: 1;
+    position: absolute;
+    width: 220px;
+    display: block;
+    /* overflow: auto; */
+    height: calc(100% - 130px);
+    background-color: #f0f0f0;
+    padding: 16px;
+    /* border-right: 1px solid #ccc; */
+}
+
+.sidebarHeader {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.newButton {
+    z-index: 1;
+}
+
+.plusIcon {
+    margin-right: 8px;
+}
+
+.showOptionsContainer {
+    position: absolute;
+    top: 0%;
+    /* Position on the "New" button */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    /* Ensure it's above other elements */
+    display: none;
+    /* Initially hide the options */
+}
+
+.option {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+/* Show options when "New" button is clicked */
+.newButton:focus+.showOptionsContainer,
+.showOptionsContainer:focus-within {
+    display: block;
+}
+
+/* Option divider */
+.divider {
+    border-top: 1px solid #ccc;
+    margin: 8px 0;
+    padding: 0;
+}
+
+.icon {
+    margin-right: 8px;
+}
